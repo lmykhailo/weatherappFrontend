@@ -1,12 +1,8 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
-import useForecast from '../../hooks/useForecast'
+import { ChangeEvent } from 'react'
 import ButtonForecastPage from '../ButtonForecastPage/ButtonForecastPage'
-import Forecast from '../Forecast/Forecast'
 import ArrowLeft from '../../assets/Icons/SearchBarIcons/ArrowLeft'
 import PlusSign from '../../assets/Icons/SearchBarIcons/PlusSign'
-import ModalWindow from '../ModalWindow/ModalWindowForecast'
 import SearchBar from '../SearchBar/SearchBar'
-import { forecastType } from '../../types/forecastType'
 import { searchResultType } from '../../types/searchResultType'
 
 type Props = {

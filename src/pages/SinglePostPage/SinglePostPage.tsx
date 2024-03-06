@@ -1,27 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { postsDbType } from '../../types/postsDbType'
 import usePostsBackend from '../../hooks/usePostsBackend'
-import {
-  addDoc,
-  collection,
-  Firestore,
-  onSnapshot,
-  orderBy,
-  query,
-  Timestamp,
-  where,
-} from 'firebase/firestore'
-import { Auth } from 'firebase/auth'
-import { useAuthState } from 'react-firebase-hooks/auth'
 import { Context } from '../..'
 import CommentSection from '../../components/CommentSection/CommentSection'
 
 const SinglePostPage = () => {
   const [post, setPost] = useState<postsDbType | null>(null)
   const [loading, setLoading] = useState(false)
-  const [comments, setComments] = useState([])
-  const [value, setValue] = useState('')
   const { id } = useParams()
 
   const context = useContext(Context)
@@ -29,10 +15,6 @@ const SinglePostPage = () => {
   if (!context) {
     throw new Error('Context is not provided')
   }
-
-  const { auth } = context as { auth: Auth }
-  const { firestore } = context as { firestore: Firestore }
-  const [user] = useAuthState(auth)
 
   const { getOnePost } = usePostsBackend()
 

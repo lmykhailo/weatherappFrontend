@@ -1,5 +1,4 @@
 import AppRouter from './routes/AppRouter/AppRouter'
-import HomeMainPage from './pages/HomeMainPage/HomeMainPage'
 import { BrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 

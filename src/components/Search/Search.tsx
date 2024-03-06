@@ -1,13 +1,11 @@
 import { useState, ChangeEvent, useEffect } from 'react'
-import SearchBar from '../SearchBar/SearchBar'
+import SearchBar from '../../shared/SearchBar/SearchBar'
 import CityPanel from '../CityPanel/CityPanel'
-import useForecast from '../../hooks/useForecast'
-import Forecast from '../Forecast/Forecast'
 import { searchResultType } from '../../types/searchResultType'
 import useBackend from '../../hooks/useForecastBackend'
 import './Search.css'
 import { dbResultType } from '../../types/dbResultType'
-import LoaderSpin from '../LoaderSpin/LoaderSpin'
+import LoaderSpin from '../../shared/LoaderSpin/LoaderSpin'
 type Props = {
   city: string
   searchVariants: []

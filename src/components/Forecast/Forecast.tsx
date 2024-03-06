@@ -1,8 +1,8 @@
-import TopOfForecast from '../TopOfForecast/TopOfForecast'
-import HourlyForecast from '../HourlyForecast/HourlyForecast'
+import TopOfForecast from '../../shared/TopOfForecast/TopOfForecast'
+import HourlyForecast from '../../shared/HourlyForecast/HourlyForecast'
 import TilesPanel from '../TilesPanel/TilesPanel'
 import { forecastType } from '../../types/forecastType'
-import { useEffect } from 'react'
+
 type Props = {
   data: forecastType | null
 }

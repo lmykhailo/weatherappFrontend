@@ -2,12 +2,8 @@ import { useEffect, useState } from 'react'
 import { searchResultType } from '../../types/searchResultType'
 import { forecastType } from '../../types/forecastType'
 import { dbResultType } from '../../types/dbResultType'
-import DeleteIcon from '../../assets/Icons/CityPanelIcons/DeleteIcon'
-import useBackend from '../../hooks/useForecastBackend'
-import ButtonForecastPage from '../ButtonForecastPage/ButtonForecastPage'
-import OpenIcon from '../../assets/Icons/CityPanelIcons/OpenIcon'
 import CityPanelInformation from '../CityPanelInformation/CityPanelInformation'
-import ButtonsCityPanel from '../ButtonsCityPanel/ButtonsCityPanel'
+import ButtonsCityPanel from '../../shared/ButtonsCityPanel/ButtonsCityPanel'
 import ModalWindowDelete from '../ModalWindowDelete/ModalWindowDelete'
 type Props = {
   res: dbResultType

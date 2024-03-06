@@ -1,6 +1,5 @@
 import { Auth } from 'firebase/auth'
 import { useContext, useEffect, useState } from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth'
 import { Context } from '../..'
 import EditProfileIcon from '../../assets/Icons/ProfilePageIcons/EditProfileIcon'
 import ProfileUserInformation from '../../components/ProfileUserInformation/ProfileUserInformation'
@@ -18,7 +17,6 @@ const ProfilePage = () => {
   const { getAdminRightsOfUser } = useUserBackend()
 
   const { auth } = context as { auth: Auth }
-  const [user] = useAuthState(auth)
   const onShowEdit = () => {
     setShowEdit((prevState) => !prevState)
   }

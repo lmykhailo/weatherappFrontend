@@ -14,7 +14,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { Context } from '../..'
 import { postsDbType } from '../../types/postsDbType'
 import { commentType } from '../../types/commentType'
-import CommentCard from '../CommentCard/CommentCard'
+import CommentCard from '../../shared/CommentCard/CommentCard'
 
 type Props = {
   post: postsDbType
@@ -78,20 +78,26 @@ const CommentSection = ({ post }: Props) => {
 
   return (
     <div className="my-3 flex w-full flex-col items-center justify-center">
-      <div className="flex w-3/4">
-        <input
-          className="w-full rounded-md border bg-white px-2 py-2 placeholder-black"
-          type="text"
-          placeholder="Add your comment!"
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <button
-          className="ml-2 inline-flex items-center rounded-md bg-blue-700 px-3.5 py-1.5 font-bold text-white hover:bg-blue-600"
-          onClick={() => sendComment(post?.id ?? 0)}
-        >
-          Comment
-        </button>
-      </div>
+      {user?.isAnonymous ? (
+        <p className="flex w-3/4 text-xl font-bold text-white">
+          You must login first to leave a comment!
+        </p>
+      ) : (
+        <div className="flex w-3/4">
+          <input
+            className="w-full rounded-md border bg-white px-2 py-2 placeholder-black"
+            type="text"
+            placeholder="Add your comment!"
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <button
+            className="ml-2 inline-flex items-center rounded-md bg-blue-700 px-3.5 py-1.5 font-bold text-white hover:bg-blue-600"
+            onClick={() => sendComment(post?.id ?? 0)}
+          >
+            Comment
+          </button>
+        </div>
+      )}
       {error ? <p className="my-2 text-lg text-white">{error}</p> : null}
       <div className="flex w-3/4 flex-col">
         {comments && comments.length > 0 ? (

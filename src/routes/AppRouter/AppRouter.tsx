@@ -1,18 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { Context } from '../../index'
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Navigate,
-  useNavigate,
-  Link,
-} from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import { privateRoutes, publicRoutes } from '../routes'
 import { HOMEPAGE_ROUTE, LOGIN_ROUTE } from '../consts/consts'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Auth } from 'firebase/auth'
-import useUserBackend from '../../hooks/useUserBackend'
 
 const AppRouter = () => {
   const context = useContext(Context)
