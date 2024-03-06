@@ -1,0 +1,7 @@
+export const LOGIN_ROUTE = '/login'
+export const HOMEPAGE_ROUTE = '/home'
+export const PROFILE_ROUTE = '/userprofile'
+export const REGISTRATION_ROUTE = '/registration'
+export const FORGETPASSWORD_ROUTE = '/forget-password'
+export const POSTSPAGE_ROUTE = '/blogposts'
+export const ONEPOSTPAGE_ROUTE = '/blogposts/:id'
