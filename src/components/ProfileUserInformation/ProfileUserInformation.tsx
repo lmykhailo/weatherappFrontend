@@ -1,9 +1,8 @@
 import { Auth } from 'firebase/auth'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Context } from '../..'
 const ProfileUserInformation = () => {
-  const [showEdit, setShowEdit] = useState(false)
   const context = useContext(Context)
   if (!context) {
     throw new Error('Context is not provided')
@@ -11,9 +10,7 @@ const ProfileUserInformation = () => {
 
   const { auth } = context as { auth: Auth }
   const [user] = useAuthState(auth)
-  const onShowEdit = () => {
-    setShowEdit((prevState) => !prevState)
-  }
+
   console.log(user?.photoURL)
   return (
     <div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import usePostsBackend from '../../hooks/usePostsBackend'
 import { postsDbType } from '../../types/postsDbType'
 import BigPostPanel from '../../components/BigPostPanel/BigPostPanel'
-import LoaderSpin from '../../components/LoaderSpin/LoaderSpin'
+import LoaderSpin from '../../shared/LoaderSpin/LoaderSpin'
 import { useNavigate } from 'react-router-dom'
 
 const PostsPage = () => {

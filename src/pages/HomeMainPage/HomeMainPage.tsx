@@ -1,15 +1,7 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import useForecast from '../../hooks/useForecast'
-import useBackend from '../../hooks/useForecastBackend'
-import { searchResultType } from '../../types/searchResultType'
-import ForecastTopBar from '../../components/ForecastTopBar/ForecastTopBar'
-import Forecast from '../../components/Forecast/Forecast'
 import Search from '../../components/Search/Search'
-import ModalWindowForecast from '../../components/ModalWindow/ModalWindowForecast'
 import ForecastPage from '../ForecastPage/ForecastPage'
-import { Context } from '../..'
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { Auth, signOut } from 'firebase/auth'
 import SidePostPanel from '../../components/SidePostPanel/SidePostPanel'
 
 const HomeMainPage = (): JSX.Element => {

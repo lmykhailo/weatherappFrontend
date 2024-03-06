@@ -1,16 +1,14 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Auth, signOut } from 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Context } from '../..'
 import { NavLink } from 'react-router-dom'
 import {
   HOMEPAGE_ROUTE,
-  LOGIN_ROUTE,
   POSTSPAGE_ROUTE,
   PROFILE_ROUTE,
 } from '../../routes/consts/consts'
 import HomeIcon from '../../assets/Icons/NavbarIcons/HomeIcon'
-import ButtonForecastPage from '../ButtonForecastPage/ButtonForecastPage'
 import ProfileIcon from '../../assets/Icons/NavbarIcons/ProfileIcon'
 import LogOutIcon from '../../assets/Icons/NavbarIcons/LogOutIcon'
 import PostsPageIcon from '../../assets/Icons/NavbarIcons/PostsPageIcon'

@@ -1,9 +1,7 @@
 import { useContext, useState } from 'react'
-import { dbResultType } from '../types/dbResultType'
 import { Auth } from 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Context } from '..'
-import { dbQueryType } from '../types/dbQueryType'
 import { userDbType } from '../types/userDbType'
 
 const baseUrl = 'http://localhost:8080'

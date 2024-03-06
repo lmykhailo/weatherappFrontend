@@ -9,7 +9,7 @@ import { forecastType } from '../../types/forecastType'
 
 import Sunrise from '../../assets/Icons/TilesComponentIcons/Sunrise'
 import Sunset from '../../assets/Icons/TilesComponentIcons/Sunset'
-import Tiles from '../Tiles.tsx/Tiles'
+import Tiles from '../../shared/Tiles.tsx/Tiles'
 
 type Props = {
   data: forecastType
